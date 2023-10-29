@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <form method="POST" action="/">
+    
+    <h1 title="User Details" style="text-align: center;">User Details</h1>
+    <p>
+        <label for="First_Name">First_Name: </label>
+        <input title="Enter your name" type="text" name="First_Name" id="First_Name"><br><br>
+    </p>
+    <p>
+        <label for="Last_Name">Last_name: </label>
+        <input title="Enter Last Name" type="text" name="Last_Name" id="Last_Name"><br><br>
+    </p>
+    <p>
+        <label for="Date_of_Birth">Date_of_Birth: </label>
+        <input title="Enter date of birth" type="date" name="Date_of_Birth" id="Date_of_Birthe"><br><br>
+    </p>
+    <p>
+        <label for="Sex">Sex: </label>
+        <select name="Sex" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br>
+    </p>
+    <p>
+        <label for="Address">Address: </label>
+        <input title="Enter Address" type="Address" name="Address" id="Address"><br><br>
+    </p>
+    <p>
+        <label for="EmailId">EmailId: </label>
+        <input title="Enter EmailId" type="email" name="EmailId" id="EmailId"><br><br> 
+    </p>
+    <p>
+        <label for="Mobile">Mobile</label>
+        <input title="Enter Phone no" type="number" name="Mobile" id="Mobile"><br><br>
+    </p>
+    <p>
+        <input type="submit" Value="Submit">
+    </p>
+</form>
+</body>
+</html>

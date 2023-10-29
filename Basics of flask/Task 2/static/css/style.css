@@ -1,0 +1,16 @@
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/019/032/113/non_2x/banking-finance-and-banking-networking-business-global-internet-connection-financial-technology-digital-marketing-world-map-point-line-composition-earth-planet-globe-in-wireframe-hand-vector.jpg');
+    background-size: cover;
+    backface-visibility:inherit ;
+    background-attachment: fixed;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    color: #e2ede2;
+}
+p{
+    color: #e2ede2;
+}
+a{
+    color: blanchedalmond;
+}
