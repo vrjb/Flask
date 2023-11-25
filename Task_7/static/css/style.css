@@ -1,0 +1,39 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #0c0303;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #968b8b;
+  }
+table.center {
+    margin-left:auto; 
+    margin-right: auto;
+  }
+body {
+    
+    text-align: center;
+    background-color: rgb(197, 218, 239);
+    background-size: cover;
+    backface-visibility:inherit ;
+    background-attachment: fixed;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #0b0101;
+}
+p{
+    text-align:center ;
+    color: #020802;
+}
+a{
+    color: rgb(16, 7, 1);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="text-center">To-Do App</h1>
+        <form method="POST" action="/add" class="form-inline justify-content-center my-3">
+            <div class="form-group mx-sm-3">
+               
+                <input type="text" class="form-control" name="Task" placeholder="Task:Enter a task here" required><br><br>
+                
+                <input type="text" class="form-control" name="Assignee" placeholder="Enter a Assignee here" required><br><br>
+                
+                <input type="text" class="form-control" name="Notes" placeholder="Enter a Notes here" required><br>
+                
+                <select title="Status" class="form-control" placeholder="select" type="text" name="Status" required>
+                    <option value="In progress">In progress</option>
+                    <option value="Completed">Completed</option>
+                    </select><br>
+            </div><br><br>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+
+        <table class="table">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Assignee</th>
+            <th>Notes</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task['Task'] }}</td>
+            <td>{{ task['Assignee'] }}</td>
+            <td>{{ task['Notes'] }}</td>
+            <td>{{ task['Status'] }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('update', id=task['id']) }}">
+                    <input type="hidden" name="id" value="{{ task['id'] }}">
+                    <div class="form-group">
+                        <input type="text" name="new_Task" class="form-control" placeholder="Update Task">
+                    
+                        <input type="text" name="new_Assignee" class="form-control" placeholder="Update Assignee">
+                    
+                        <input type="text" name="new_Note" class="form-control" placeholder="Update Notes">
+                    
+                    
+                        <input type="text" name="new_Status" class="form-control" placeholder="Update status">
+                    </div>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+                <a href="/delete/{{ task['id'] }}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    </div>
+</body>
+</html>

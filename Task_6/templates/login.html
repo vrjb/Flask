@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+    <title> Welcome to file storage system</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <form method="POST" action="/login">
+    <h1 style="text-align: center;">Welcome to file storage</h1><br><br>
+    <h2 style="text-align: center;">Sign In</h2><br><br>
+        <p>
+            <label for="Email">Email</label>
+            <input title="Email" type="text" name="Email" id="Email" required><br><br>
+        </p>
+        <p>
+            <label for="Password">Password:</label>
+            <input title="Password" type="password" name="Password" id="Password" required><br><br>
+        </p>
+        <p>
+            <input type="submit" value="login">
+        </p>
+    </form>
+</body>
+    </html>

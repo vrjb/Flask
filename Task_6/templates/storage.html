@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File storage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% for messages in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{messages}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+        
+    {% endfor %}
+    <form method="POST" enctype="multipart/form-data">
+        <h1 style="text-align: center;">File storage</h1>
+        <h2 style="text-align: left;">Upload files</h2>
+        <input style="background-color: azure;" type="file" name=file>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+table,th,td {
+    
+    table-layout: inherit;
+    text-align: center;
+    border: 1px solid rgb(241, 235, 235);
+    border-collapse:separate;
+    color: #f3f7f3;
+}
+table.center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+
+body {
+    
+    text-align: center;
+    background-image:url("https://w0.peakpx.com/wallpaper/677/889/HD-wallpaper-black-stylish-background-green-neon-lines-green-light-effects-abstract-black-background.jpg"); 
+    background-size: cover;
+    backface-visibility:inherit ;
+    background-attachment: fixed;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1,h2 {
+    text-align: center;
+    color: #f6f6f6;
+}
+p{
+    text-align:center ;
+    color: #f3f7f3;
+}
+a{
+    color: rgb(243, 240, 238);
+}

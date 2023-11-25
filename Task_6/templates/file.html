@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Files</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Uploaded Files</h1>
+    <table class="center">
+        <tr>
+            <th style="color: beige;">File Name</th>
+            <th>Download</th>
+        </tr>
+        {% for file in files %}
+        <tr>
+            <td style="color: beige;">{{ file }}</td>
+            <td><a href="{{ url_for('uploads', filename=files) }}">Download</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>
+        <a style="text-align: center;" class="botton" href="/login">Logout</a>
+    </p>
+</body>
+</html>
